@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
+import bg from '@/assets/images/bg.jpg'
 
 export function HeroSection() {
   const headlineRef = useRef<HTMLHeadingElement>(null);
@@ -36,8 +37,8 @@ export function HeroSection() {
       <div className="absolute inset-0 z-0">
         <motion.video
           alt="light motion video"
-          src="https://c.animaapp.com/mj9ihv87GvfPxL/img/ai_5.mp4"
-          poster="https://c.animaapp.com/mj9ihv87GvfPxL/img/ai_5-poster.png"
+          src= {bg}
+          poster= {bg}
           className="w-full h-full object-cover"
           autoPlay
           loop
@@ -47,7 +48,7 @@ export function HeroSection() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, ease: 'easeOut' }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/75 to-background" />
       </div>
 
       {/* Content */}

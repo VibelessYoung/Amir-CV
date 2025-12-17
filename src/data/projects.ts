@@ -6,6 +6,10 @@ import job1 from '@/assets/images/job-1.png'
 import job2 from '@/assets/images/job-2.png'
 import ocr1 from '@/assets/images/ocr-1.png'
 import ocr2 from '@/assets/images/ocr-2.png'
+import anime1 from '@/assets/images/anime-1.png'
+import anime2 from '@/assets/images/anime-2.png'
+import twitter1 from '@/assets/images/twitter-1.png'
+import twitter2 from '@/assets/images/twitter-2.png'
 
 export interface Project {
   id: string;
@@ -33,8 +37,8 @@ export const projects: Project[] = [
     overview: 'This project modern anime website so you can see animes and their information and it support routing and more features.',
     technologies: ['React', 'JavaScript', 'Tailwind CSS'],
     gallery: [
-      { url: 'https://c.animaapp.com/mj9ihv87GvfPxL/img/ai_2.png', alt: 'website interface' },
-      { url: 'https://c.animaapp.com/mj9ihv87GvfPxL/img/ai_4.png', alt: 'website interface' },
+      { url: anime1, alt: 'website interface' },
+      { url: anime2, alt: 'website interface' },
     ],
     results: 'get a good feedbacks from friends.',
   },
@@ -65,8 +69,8 @@ export const projects: Project[] = [
     overview: 'This is a simple clone of twitter and have a feature for read, post and filter twits.',
     technologies: ['HTML/CSS', 'JavaScript'],
     gallery: [
-      { url: 'https://c.animaapp.com/mj9ihv87GvfPxL/img/ai_2.png', alt: 'website interface' },
-      { url: 'https://c.animaapp.com/mj9ihv87GvfPxL/img/ai_4.png', alt: 'website interface' },
+      { url: twitter1, alt: 'website interface' },
+      { url: twitter2, alt: 'website interface' },
     ],
     results: 'get a good feedbacks.',
   },
