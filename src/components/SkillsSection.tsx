@@ -2,17 +2,28 @@ import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Code2, Palette, Smartphone, Zap, Users, TrendingUp } from 'lucide-react';
+import {
+  Palette,        // HTML / CSS / Sass
+  Brush,          // Tailwind
+  Layers,         // Bootstrap
+  Code2,          // JavaScript
+  Atom,           // React
+  Sun,            // Astro
+  GitBranch,      // Git
+  Github,         // GitHub
+} from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const skills = [
-  { name: 'React & TypeScript', level: 95, icon: Code2 },
-  { name: 'UI/UX Design', level: 90, icon: Palette },
-  { name: 'Responsive Design', level: 92, icon: Smartphone },
-  { name: 'Performance Optimization', level: 88, icon: Zap },
-  { name: 'Team Collaboration', level: 94, icon: Users },
-  { name: 'Agile Methodology', level: 87, icon: TrendingUp },
+  { name: "HTML / CSS / Sass", level: 80, icon: Palette },
+  { name: "Bootstrap", level: 70, icon: Layers },
+  { name: "Tailwind CSS", level: 70, icon: Brush },
+  { name: "JavaScript", level: 60, icon: Code2 },
+  { name: "React", level: 60, icon: Atom },
+  { name: "Astro", level: 40, icon: Sun },
+  { name: "Git", level: 40, icon: GitBranch },
+  { name: "GitHub", level: 40, icon: Github },
 ];
 
 export function SkillsSection() {

@@ -1,0 +1,89 @@
+import scarlet from '@/assets/images/scarlet.jpg'
+import search from '@/assets/images/search.jpg'
+import twitter from '@/assets/images/twitter.jpg'
+import text from '@/assets/images/text.jpg'
+import job1 from '@/assets/images/job-1.png'
+import job2 from '@/assets/images/job-2.png'
+import ocr1 from '@/assets/images/ocr-1.png'
+import ocr2 from '@/assets/images/ocr-2.png'
+
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  imageAlt: string;
+  category: string;
+  tags: string[];
+  overview: string;
+  technologies: string[];
+  gallery: { url: string; alt: string }[];
+  results: string;
+}
+
+export const projects: Project[] = [
+  {
+    id: 'modern-web-interface',
+    title: 'Saturn-Anime',
+    description: 'modern anime website so you can see animes and their information.',
+    image: scarlet,
+    imageAlt: 'website interface',
+    category: 'web',
+    tags: ['React', 'JavaScript', 'Tailwind'],
+    overview: 'This project modern anime website so you can see animes and their information and it support routing and more features.',
+    technologies: ['React', 'JavaScript', 'Tailwind CSS'],
+    gallery: [
+      { url: 'https://c.animaapp.com/mj9ihv87GvfPxL/img/ai_2.png', alt: 'website interface' },
+      { url: 'https://c.animaapp.com/mj9ihv87GvfPxL/img/ai_4.png', alt: 'website interface' },
+    ],
+    results: 'get a good feedbacks from friends.',
+  },
+  {
+    id: 'simple-web-interface',
+    title: 'JobRemote',
+    description: 'simple website for find jobs.',
+    image: search,
+    imageAlt: 'website interface',
+    category: 'web',
+    tags: ['HTML/CSS', 'JavaScript'],
+    overview: 'This is a simple website but have a feature for find jobs and its a good train for js and work with fake apis.',
+    technologies: ['HTML/CSS', 'JavaScript'],
+    gallery: [
+      { url: job1, alt: 'website interface' },
+      { url: job2, alt: 'website interface' },
+    ],
+    results: 'i guess its not work correct on host.',
+  },
+  {
+    id: 'simple-web-interface-2',
+    title: 'Twitter-Clone',
+    description: 'simple clone of twitter.',
+    image: twitter,
+    imageAlt: 'website interface',
+    category: 'web',
+    tags: ['HTML/CSS', 'JavaScript'],
+    overview: 'This is a simple clone of twitter and have a feature for read, post and filter twits.',
+    technologies: ['HTML/CSS', 'JavaScript'],
+    gallery: [
+      { url: 'https://c.animaapp.com/mj9ihv87GvfPxL/img/ai_2.png', alt: 'website interface' },
+      { url: 'https://c.animaapp.com/mj9ihv87GvfPxL/img/ai_4.png', alt: 'website interface' },
+    ],
+    results: 'get a good feedbacks.',
+  },
+  {
+    id: 'simple-web-interface-3',
+    title: 'OCR-Extractor',
+    description: 'simple ocr-extractor.',
+    image: text,
+    imageAlt: 'website interface',
+    category: 'web',
+    tags: ['HTML/CSS', 'JavaScript', 'Tesseract'],
+    overview: 'This is a simple ocr-extractor and it can extract texts from images in a second!',
+    technologies: ['HTML/CSS', 'JavaScript', 'Tesseract'],
+    gallery: [
+      { url: ocr1, alt: 'website interface' },
+      { url: ocr2, alt: 'website interface' },
+    ],
+    results: 'get a good feedbacks.',
+  },
+];

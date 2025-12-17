@@ -138,7 +138,7 @@ export function ContactSection() {
               <h3 className="text-2xl font-heading font-bold text-foreground mb-6">Connect With Me</h3>
               <div className="space-y-6">
                 <a
-                  href="mailto:hello@example.com"
+                  href="mailto:vibelessyoung@gmail.com"
                   className="flex items-center gap-4 p-4 bg-card text-card-foreground rounded-lg border border-border hover:border-primary transition-colors group"
                 >
                   <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
@@ -146,27 +146,11 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
-                    <p className="text-card-foreground font-medium">hello@example.com</p>
+                    <p className="text-card-foreground font-medium">vibelessyoung@gmail.com"</p>
                   </div>
                 </a>
-
                 <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 bg-card text-card-foreground rounded-lg border border-border hover:border-primary transition-colors group"
-                >
-                  <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                    <Linkedin className="w-6 h-6 text-primary" strokeWidth={1.5} />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">LinkedIn</p>
-                    <p className="text-card-foreground font-medium">Connect on LinkedIn</p>
-                  </div>
-                </a>
-
-                <a
-                  href="https://github.com"
+                  href="https://github.com/VibelessYoung"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 bg-card text-card-foreground rounded-lg border border-border hover:border-primary transition-colors group"

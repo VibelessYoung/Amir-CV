@@ -10,7 +10,7 @@ export function PortfolioSection() {
   const navigate = useNavigate();
   const [filter, setFilter] = useState('all');
 
-  const categories = ['all', 'web', 'mobile', 'design'];
+  const categories = ['all', 'web', 'design'];
 
   const filteredProjects = filter === 'all' 
     ? projects 

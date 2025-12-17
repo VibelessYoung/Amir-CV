@@ -8,28 +8,22 @@ gsap.registerPlugin(ScrollTrigger);
 
 const experiences = [
   {
-    company: 'Tech Innovations Inc.',
-    role: 'Senior Front-End Developer',
-    duration: '2021 - Present',
-    description: 'Leading development of enterprise-level web applications using React and TypeScript. Mentoring junior developers and establishing best practices for code quality and performance.',
+    company: '',
+    role: 'start learn web',
+    duration: '2025',
+    description: 'start learning web and create page design and more',
   },
   {
-    company: 'Creative Digital Agency',
-    role: 'UX Designer & Developer',
-    duration: '2019 - 2021',
-    description: 'Designed and developed responsive websites and web applications for diverse clients. Collaborated with cross-functional teams to deliver pixel-perfect implementations.',
+    company: 'uni-montazeri',
+    role: 'create a tracker website',
+    duration: '2025',
+    description: 'create a more page with a good design and a add work logic and i learn team work!',
   },
   {
-    company: 'Startup Ventures',
-    role: 'Full-Stack Developer',
-    duration: '2017 - 2019',
-    description: 'Built and maintained full-stack applications using modern JavaScript frameworks. Contributed to product strategy and user experience design decisions.',
-  },
-  {
-    company: 'Design Studio Pro',
-    role: 'Junior Front-End Developer',
-    duration: '2015 - 2017',
-    description: 'Developed responsive websites and implemented interactive UI components. Gained expertise in HTML, CSS, JavaScript, and modern front-end workflows.',
+    company: 'Azhman-Group',
+    role: 'Check and analyze website',
+    duration: '2025',
+    description: 'check and analyze their website and give full feedbacks for optimize, seo, bugs and more',
   },
 ];
 
