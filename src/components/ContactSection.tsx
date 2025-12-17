@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Mail, Linkedin, Github, Send } from 'lucide-react';
+import emailjs from 'emailjs-com';
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -15,16 +16,30 @@ export function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    alert('Thank you for your message! I will get back to you soon.');
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  try {
+    await emailjs.send(
+      'service_n7xix7t',   // Service ID
+      'template_tlovqg7',  // Template ID
+      {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      },
+      'Tarw5VCGRr3Tat9Xu'        // Public Key
+    );
+
+    alert('Message sent successfully!');
     setFormData({ name: '', email: '', message: '' });
+  } catch (error) {
+    console.error(error);
+    alert('Failed to send message!');
+  } finally {
     setIsSubmitting(false);
-  };
+  }
+};
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
