@@ -57,9 +57,16 @@ export function SkillsSection() {
     <section
       id="skills"
       ref={sectionRef}
-      className="animate-section py-32 bg-background"
+      className="animate-section py-32 bg-background overflow-x-hidden"
     >
-      <div className="container mx-auto px-8">
+      <div
+        className="absolute inset-0 z-0 pointer-events-none
+    [mask-image:radial-gradient(ellipse_at_center,black_65%,transparent_100%)]"
+      >
+        <div className="absolute top-32 left-0 w-[420px] h-[420px] -translate-x-1/3 bg-primary/25 rounded-full blur-[120px]" />
+        <div className="absolute top-1/3 right-0 w-[420px] h-[420px] translate-x-1/3 bg-indigo-500/20 rounded-full blur-[120px]" />
+      </div>
+      <div className="relative container z-10 mx-auto px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
