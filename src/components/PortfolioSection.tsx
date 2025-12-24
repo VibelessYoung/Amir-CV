@@ -1,20 +1,25 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
-import { projects } from '../data/projects';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import { projects } from "../data/projects";
 
 export function PortfolioSection() {
   const navigate = useNavigate();
-  const [filter, setFilter] = useState('all');
+  const [filter, setFilter] = useState("all");
 
-  const categories = ['all', 'web', 'design'];
+  const categories = ["all", "web", "design"];
 
-  const filteredProjects = filter === 'all' 
-    ? projects 
-    : projects.filter(p => p.category === filter);
+  const filteredProjects =
+    filter === "all" ? projects : projects.filter((p) => p.category === filter);
 
   return (
     <section id="portfolio" className="animate-section py-32 bg-neutral">
@@ -26,7 +31,10 @@ export function PortfolioSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4 tracking-tight leading-tight" style={{ letterSpacing: '-0.025em', lineHeight: '1.2' }}>
+          <h2
+            className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4 tracking-tight leading-tight"
+            style={{ letterSpacing: "-0.025em", lineHeight: "1.2" }}
+          >
             Featured Projects
           </h2>
           <div className="w-24 h-1 bg-gradient-1 mx-auto rounded-full mb-12" />
@@ -37,11 +45,11 @@ export function PortfolioSection() {
               <Button
                 key={category}
                 onClick={() => setFilter(category)}
-                variant={filter === category ? 'default' : 'outline'}
+                variant={filter === category ? "default" : "outline"}
                 className={
                   filter === category
-                    ? 'bg-primary text-primary-foreground hover:bg-primary/90 font-normal'
-                    : 'bg-transparent text-foreground border-border hover:bg-accent hover:text-accent-foreground font-normal'
+                    ? "bg-primary text-primary-foreground hover:bg-primary/90 font-normal"
+                    : "bg-transparent text-foreground border-border hover:bg-accent hover:text-accent-foreground font-normal"
                 }
               >
                 {category.charAt(0).toUpperCase() + category.slice(1)}

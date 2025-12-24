@@ -1,8 +1,8 @@
-import { useParams, useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import { ArrowLeft } from 'lucide-react';
-import { projects } from '../data/projects';
+import { useParams, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
+import { projects } from "../data/projects";
 
 export function ProjectDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -17,9 +17,11 @@ export function ProjectDetailPage() {
     return (
       <div className="min-h-screen bg-background text-foreground flex items-center justify-center px-8">
         <div className="text-center">
-          <h1 className="text-4xl font-heading font-bold text-foreground mb-4">Project Not Found</h1>
+          <h1 className="text-4xl font-heading font-bold text-foreground mb-4">
+            Project Not Found
+          </h1>
           <Button
-            onClick={() => navigate('/')}
+            onClick={() => navigate("/")}
             className="bg-primary text-primary-foreground hover:bg-primary/90 font-normal"
           >
             <ArrowLeft className="w-5 h-5 mr-2" />
@@ -35,7 +37,7 @@ export function ProjectDetailPage() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-8 py-6">
           <Button
-            onClick={() => navigate('/')}
+            onClick={() => navigate("/")}
             variant="ghost"
             className="bg-transparent text-foreground hover:bg-accent hover:text-accent-foreground font-normal"
           >
@@ -66,13 +68,17 @@ export function ProjectDetailPage() {
 
             <div className="grid md:grid-cols-2 gap-12 mb-16">
               <div>
-                <h2 className="text-2xl font-heading font-bold text-foreground mb-4">Overview</h2>
+                <h2 className="text-2xl font-heading font-bold text-foreground mb-4">
+                  Overview
+                </h2>
                 <p className="text-foreground leading-relaxed">
                   {project.overview}
                 </p>
               </div>
               <div>
-                <h2 className="text-2xl font-heading font-bold text-foreground mb-4">Technologies</h2>
+                <h2 className="text-2xl font-heading font-bold text-foreground mb-4">
+                  Technologies
+                </h2>
                 <div className="flex flex-wrap gap-3">
                   {project.technologies.map((tech, index) => (
                     <span
@@ -87,7 +93,9 @@ export function ProjectDetailPage() {
             </div>
 
             <div className="mb-16">
-              <h2 className="text-2xl font-heading font-bold text-foreground mb-6">Project Gallery</h2>
+              <h2 className="text-2xl font-heading font-bold text-foreground mb-6">
+                Project Gallery
+              </h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {project.gallery.map((item, index) => (
                   <img
@@ -102,7 +110,9 @@ export function ProjectDetailPage() {
             </div>
 
             <div className="bg-card text-card-foreground p-8 rounded-lg border border-border">
-              <h2 className="text-2xl font-heading font-bold text-card-foreground mb-4">Results & Impact</h2>
+              <h2 className="text-2xl font-heading font-bold text-card-foreground mb-4">
+                Results & Impact
+              </h2>
               <p className="text-card-foreground leading-relaxed">
                 {project.results}
               </p>

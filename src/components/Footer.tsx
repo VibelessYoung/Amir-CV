@@ -1,9 +1,9 @@
-import { Button } from '@/components/ui/button';
-import { ArrowUp, Github, Mail, Send } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { ArrowUp, Github, Mail, Send } from "lucide-react";
 
 export function Footer() {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
